@@ -34,7 +34,7 @@ export default {
       this.btn2 = 'SHOW SPECIMEN'
     } else if (this.story === 'a') {
       this.caption1 = '5 cm long (1.97 in)'
-      this.caption2 = '8.2 cm long (3.25 in)'
+      this.caption2 = '15.24 cm long (6 in)'
       this.btn1 = 'COMPARE SIZE'
       this.btn2 = 'SHOW SPECIMEN'
     }
