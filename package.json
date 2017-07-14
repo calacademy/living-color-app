@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js && cd dist && zip ../dist.zip -r * .[^.]*",
+    "deploy": "aws s3 rm s3://living-color.calacademy.org --recursive && aws s3 cp dist s3://living-color.calacademy.org --recursive",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "test": "npm run unit",
     "lint": "eslint --ext .js,.vue src test/unit/specs"
