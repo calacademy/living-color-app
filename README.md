@@ -33,15 +33,9 @@ trivial placeholder unit test in place.
 yarn test
 ```
 
-## Build Notes
-
-The build script includes a process that compresses the distribution files in a
-.zip file in project root. This file is excluded from git repo but is pushed to
-AWS in Elastic Beanstalk deployment process.
-
 ## Development and Production Builds
 
-Webpack build init scripts in package.json.
+Webpack dev and build init scripts in package.json.
 
 ```
 yarn dev
@@ -50,10 +44,9 @@ yarn build
 
 ## Deploy Notes
 
-### .elasticbeanstalk/config.yml for eb cli deploy
-This directory/file should be placed in project root. Zipped file for this asset
-can be found in team technical documentation for project.
+The deploy script deletes s3://living-color.calacademy.org content and copies
+local dist folder contents to s3://living-color.calacademy.org.
 
 ```
-eb deploy
+yarn deploy
 ```
